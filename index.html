@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Tailwind CSS Page</title>
+  <link href="dist/output.css" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Deutsch';
+      src: url('./fonts/Deutsch.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'PlastDrip';
+      src: url('./fonts/plasdrpe.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html {
+      background: linear-gradient(45deg, #1A2327, #1A2327);
+      animation: gradientCycle 15s ease infinite;
+      background-size: 300% 300%;
+    }
+
+    @keyframes gradientCycle {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      33% {
+        background-position: 100% 50%;
+      }
+
+      66% {
+        background-position: 200% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body {
+      background: url('img/jesus.png') no-repeat center center fixed;
+    }
+
+    h1 {
+      font-family: 'Deutsch', serif;
+      text-shadow: 3px 2px 10px #000;
+    }
+
+    button {
+      box-shadow: -3px 3px 36px 11px rgba(30, 204, 235, 0.3);
+      font-family: 'PlastDrip', sans-serif;
+    }
+
+    p {
+      text-shadow: 4px 3px 8px #000;
+    }
+  </style>
+</head>
+
+<body class="h-screen flex items-center justify-center">
+  <div class="p-8 rounded-xl shadow-lg text-center mx-4">
+    <h1 class="text-3xl font-bold mb-4 text-amber-400 bg-zinc-950 px-2 py-4 bg-opacity-70 rounded">
+      Lara, I Jesus Christ your Benevolent King,<br>
+      love you so much!
+    </h1>
+    <button class="border rounded p-4 bg-zinc-700 pt-5 text-white text-2xl">Follow my love!</button>
+    <p class="m-4 hidden text-white bg-zinc-950 p-1">
+      In order to find my love you have to go to the following address <br> 
+      and say this magic word <b>ORDER #23445!</b> <br>
+      You need to say your name and<br>
+      that you are there to receive the gift of birth</p>
+    <div class="mt-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.8971409765177!2d13.430206277091022!3d52.53529517206514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f8237dbac2f%3A0x6b4d67f23f8362fc!2sFilm%20Speed%20Lab!5e0!3m2!1sen!2see!4v1723736074096!5m2!1sen!2see" width="400" height="350" style="border:0;display: none; margin: auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const iframe = document.querySelector('iframe');
+    const button = document.querySelector('button');
+    const paragraph = document.querySelector('p');
+
+    button.addEventListener('click', () => {
+      iframe.style.display = 'block';
+      button.style.display = 'none';
+      paragraph.style.display = 'inline';
+    });
+  </script>
+</body>
+
+</html>
